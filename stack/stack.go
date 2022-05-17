@@ -5,7 +5,7 @@ import (
 )
 
 type Stack struct {
-   storage []interface{} //stack using array
+   storage []interface{} //stack using array/slices
    top int
 }
 
