@@ -10,7 +10,10 @@ func balancedParenthesis(){
 	fmt.Println("Enter expression: ")
 	fmt.Scan(&expression)
 
-    stack_,_:=stack.New(5)
+
+
+    stack_:=stack.New(5)
+    
 
 	for _,bracket:= range expression {
 		strbrckt:=string(bracket)

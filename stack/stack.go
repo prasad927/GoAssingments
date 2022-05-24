@@ -64,11 +64,11 @@ func (st *Stack) String() (string){
 }
 
 //factory
-func New(initialSize int) (*Stack,error){
+func New(initialSize int) (*Stack){
 	if initialSize<0 {
-		return &Stack{},fmt.Errorf("Error : size is not valid")
+		return &Stack{}
 	}
 
-	return &Stack{storage:make([]interface{},initialSize),top:-1},nil
+	return &Stack{storage:make([]interface{},initialSize),top:-1}
 }
 

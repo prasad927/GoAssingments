@@ -4,7 +4,7 @@ import "fmt"
 
 func main(){
 	fmt.Println("Assignments...")
-
+	// https://github.com/prasad9270/GoAssingments
 	var choice int
 	fmt.Println("Enter your choice.")
 	fmt.Println("1. CheckNumOrStringIsPalindrome")
