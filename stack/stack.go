@@ -66,7 +66,7 @@ func (st *Stack) String() (string){
 //factory
 func New(initialSize int) (*Stack){
 	if initialSize<0 {
-		return &Stack{}
+		panic("stack size cant be negative")
 	}
 
 	return &Stack{storage:make([]interface{},initialSize),top:-1}

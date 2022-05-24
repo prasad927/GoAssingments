@@ -4,7 +4,6 @@ import "fmt"
 
 func main(){
 	fmt.Println("Assignments...")
-	// https://github.com/prasad9270/GoAssingments
 	var choice int
 	fmt.Println("Enter your choice.")
 	fmt.Println("1. CheckNumOrStringIsPalindrome")
@@ -15,6 +14,7 @@ func main(){
 	fmt.Println("6. secondHighestNumber")
 	fmt.Println("7. topTwoMaximumNumbers")
 	fmt.Println("8. balancedParenthesis")
+	fmt.Println("9. InfixToPostfix")
 	fmt.Scan(&choice)
     
 
@@ -37,6 +37,8 @@ func main(){
 			 fmt.Println("The top two max numbers are: ",fmax,smax)
 		 case 8:
 			 balancedParenthesis()
+		 case 9:
+			 InfixToPostfix()
 		 default:
 			 fmt.Println("Wrong choice")
 	}
