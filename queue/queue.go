@@ -36,7 +36,7 @@ func (q *queue) Remove(){
 		panic("queue is empty can't perform removal operation!")
 	}
 
-	if q.size==1{
+	if q.Size()==1{
 		q.front=nil
 		q.rear=nil
 	}else{
