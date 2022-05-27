@@ -15,6 +15,7 @@ func main(){
 	fmt.Println("7. topTwoMaximumNumbers")
 	fmt.Println("8. balancedParenthesis")
 	fmt.Println("9. InfixToPostfix")
+	fmt.Println("10. testQueue")
 	fmt.Scan(&choice)
     
 
@@ -39,6 +40,9 @@ func main(){
 			 balancedParenthesis()
 		 case 9:
 			 InfixToPostfix()
+		
+		 case 10:
+			 testQueue()
 		 default:
 			 fmt.Println("Wrong choice")
 	}
