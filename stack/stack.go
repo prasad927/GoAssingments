@@ -27,16 +27,16 @@ func (st *Stack) Push(val interface{}){
 	st.storage[st.top]=val
 }
 
-func (st *Stack) Pop() (interface{},error){
+func (st *Stack) Pop() (interface{}){
     
 	if st.top==-1 {
-		return nil,fmt.Errorf("stack is empty")
+		panic("invalid operation: Cant perform pop operation on stack of size 0")
 	}
 
 	valToReturn:=st.storage[st.top]
 	st.top-=1
 
-	return valToReturn,nil
+	return valToReturn
 }
 
 
@@ -47,7 +47,7 @@ func (st *Stack) Size() (int){
 func (st *Stack) Peek() (interface{}){
 	
 	if st.top==-1 {
-		return nil
+		panic("invalid operation: Cant perform peek operation on stack of size 0")
 	}
 
 	return st.storage[st.top]

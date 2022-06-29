@@ -17,8 +17,8 @@ func getPrecedance(operator interface{}) int{
 }
 
 func evaluteExp(operands *stack.Stack,operator string){
-	oprin2,_:=operands.Pop()
-	oprin1,_:=operands.Pop()
+	oprin2:=operands.Pop()
+	oprin1:=operands.Pop()
     
 	oprstr1,_:=oprin1.(string)
 	oprstr2,_:=oprin2.(string)
@@ -43,7 +43,7 @@ func InfixToPostfix(){
 		if strform=="+" || strform=="-" || strform=="*" || strform=="/" {
 
 		     for operators_st.Size()!=0 && operators_st.Peek()!="(" && getPrecedance(operators_st.Peek())>=getPrecedance(strform){
-				  operator,_:= operators_st.Pop()
+				  operator:= operators_st.Pop()
 				  strop,_:=operator.(string)
 				  evaluteExp(operands_st,strop)
 			 }
@@ -53,7 +53,7 @@ func InfixToPostfix(){
 			 operators_st.Push(strform)
 		}else if strform==")"{
 			 for operators_st.Peek()!="("{
-				operator,_:= operators_st.Pop()
+				operator:= operators_st.Pop()
 				strop,_:=operator.(string)
 				evaluteExp(operands_st,strop)
 			 }
@@ -66,7 +66,7 @@ func InfixToPostfix(){
 	}
 
 	for operators_st.Size()!=0 {
-        operator,_:= operators_st.Pop()
+        operator:= operators_st.Pop()
 		strop,_:=operator.(string)
 		evaluteExp(operands_st,strop)
 	}

@@ -16,14 +16,15 @@ func main(){
 	fmt.Println("8. balancedParenthesis")
 	fmt.Println("9. InfixToPostfix")
 	fmt.Println("10. testQueue")
+	fmt.Println("11. testStack")
 	fmt.Scan(&choice)
     
 
 	switch choice {
      	 case 1:
-			CheckNumOrStringIsPalindrome()
+			 CheckNumOrStringIsPalindrome()
 		 case 2:
-			FebonacciNum()
+			 FebonacciNum()
 		 case 3:
 			 binaryToDecimal()
 		 case 4:
@@ -43,6 +44,8 @@ func main(){
 		
 		 case 10:
 			 testQueue()
+		 case 11:
+			 testStack()
 		 default:
 			 fmt.Println("Wrong choice")
 	}
