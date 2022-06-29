@@ -17,6 +17,7 @@ func main(){
 	fmt.Println("9. InfixToPostfix")
 	fmt.Println("10. testQueue")
 	fmt.Println("11. testStack")
+	fmt.Println("12. longestPalindromeInGivenString()")
 	fmt.Scan(&choice)
     
 
@@ -41,11 +42,12 @@ func main(){
 			 balancedParenthesis()
 		 case 9:
 			 InfixToPostfix()
-		
 		 case 10:
 			 testQueue()
 		 case 11:
 			 testStack()
+		 case 12:
+			 longestPalindromInGivenString()
 		 default:
 			 fmt.Println("Wrong choice")
 	}
